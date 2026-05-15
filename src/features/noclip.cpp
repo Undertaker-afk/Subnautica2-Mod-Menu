@@ -10,14 +10,14 @@ namespace Features::NoClip {
         if (!player) return;
 
         // Store original collision state
-        auto* mesh = player->GetMesh();
+        auto* mesh = player->Mesh;
         if (mesh) {
             bOriginalCollisionEnabled = mesh->IsCollisionEnabled();
-            mesh->SetCollisionEnabled(SDK::ECollisionEnabled::NoCollision);
+            mesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
         }
 
         // Disable gravity
-        auto* movement = player->GetCharacterMovement();
+        auto* movement = player->CharacterMovement;
         if (movement) {
             movement->GravityScale = 0.0f;
         }
@@ -28,15 +28,15 @@ namespace Features::NoClip {
         if (!player) return;
 
         // Restore collision
-        auto* mesh = player->GetMesh();
+        auto* mesh = player->Mesh;
         if (mesh) {
             mesh->SetCollisionEnabled(bOriginalCollisionEnabled ? 
-                SDK::ECollisionEnabled::QueryAndPhysics : 
-                SDK::ECollisionEnabled::NoCollision);
+                ECollisionEnabled::QueryAndPhysics : 
+                ECollisionEnabled::NoCollision);
         }
 
         // Restore gravity
-        auto* movement = player->GetCharacterMovement();
+        auto* movement = player->CharacterMovement;
         if (movement) {
             movement->GravityScale = 1.0f;
         }
@@ -52,12 +52,12 @@ namespace Features::NoClip {
         if (!player) return;
 
         // Keep collision disabled and gravity off
-        auto* mesh = player->GetMesh();
+        auto* mesh = player->Mesh;
         if (mesh) {
-            mesh->SetCollisionEnabled(SDK::ECollisionEnabled::NoCollision);
+            mesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
         }
 
-        auto* movement = player->GetCharacterMovement();
+        auto* movement = player->CharacterMovement;
         if (movement) {
             movement->GravityScale = 0.0f;
         }
