@@ -11,11 +11,11 @@
 
 namespace UI::Menu {
     void Render() {
-        if (!Menu::IsOpen) return;
+        if (!::Menu::IsOpen) return;
 
         // Main window
         ImGui::SetNextWindowSize(ImVec2(400, 500), ImGuiCond_FirstUseEver);
-        ImGui::Begin(Menu::Title, &Menu::IsOpen, ImGuiWindowFlags_NoCollapse);
+        ImGui::Begin(::Menu::Title, &::Menu::IsOpen, ImGuiWindowFlags_NoCollapse);
 
         // Tab bar
         if (ImGui::BeginTabBar("ModMenuTabs")) {

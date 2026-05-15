@@ -11,18 +11,6 @@ namespace SDK {
     // Get game objects
     class ASN2PlayerCharacter* GetLocalPlayer();
     class ABP_SN2PlayerController* GetPlayerController();
-    
-    // GObjects
-    extern uintptr_t GObjects;
-    extern uintptr_t GNames;
-    extern uintptr_t GWorld;
-    
-    // Offsets
-    namespace Offsets {
-        inline constexpr int32_t GObjects = 215045376;  // Will be filled from dump
-        inline constexpr int32_t GNames = 214110976;
-        inline constexpr int32_t GWorld = 211655200;
-    }
 }
 
 // Feature toggles
