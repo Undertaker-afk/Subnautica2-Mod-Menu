@@ -25,7 +25,13 @@
     <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\src\features\esp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\src\features\items.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\src\features\speed.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\src\features\vehicle_spawner.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\src\features\noclip.cpp">
@@ -73,7 +79,13 @@
     <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\5.6.1-113109+++Project+SN2-Release-Hotfix-Live-Subnautica2\CppSDK\SDK\GameplayAbilities_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\5.6.1-113109+++Project+SN2-Release-Hotfix-Live-Subnautica2\CppSDK\SDK\Subnautica2_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\5.6.1-113109+++Project+SN2-Release-Hotfix-Live-Subnautica2\CppSDK\SDK\UWEAbilitySystem_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\5.6.1-113109+++Project+SN2-Release-Hotfix-Live-Subnautica2\CppSDK\SDK\UWEInventory_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

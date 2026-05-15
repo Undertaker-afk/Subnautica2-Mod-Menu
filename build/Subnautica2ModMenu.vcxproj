@@ -345,7 +345,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\src\features\oxygen.cpp" />
     <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\src\features\battery.cpp" />
     <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\src\features\esp.cpp" />
+    <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\src\features\items.cpp" />
     <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\src\features\speed.cpp" />
+    <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\src\features\vehicle_spawner.cpp" />
     <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\src\features\noclip.cpp" />
     <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\src\ui\menu.cpp" />
     <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\src\ui\renderer.cpp" />
@@ -361,7 +363,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\5.6.1-113109+++Project+SN2-Release-Hotfix-Live-Subnautica2\CppSDK\SDK\CoreUObject_functions.cpp" />
     <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\5.6.1-113109+++Project+SN2-Release-Hotfix-Live-Subnautica2\CppSDK\SDK\Engine_functions.cpp" />
     <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\5.6.1-113109+++Project+SN2-Release-Hotfix-Live-Subnautica2\CppSDK\SDK\GameplayAbilities_functions.cpp" />
+    <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\5.6.1-113109+++Project+SN2-Release-Hotfix-Live-Subnautica2\CppSDK\SDK\Subnautica2_functions.cpp" />
     <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\5.6.1-113109+++Project+SN2-Release-Hotfix-Live-Subnautica2\CppSDK\SDK\UWEAbilitySystem_functions.cpp" />
+    <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\5.6.1-113109+++Project+SN2-Release-Hotfix-Live-Subnautica2\CppSDK\SDK\UWEInventory_functions.cpp" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

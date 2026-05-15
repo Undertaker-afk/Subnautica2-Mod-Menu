@@ -26,7 +26,9 @@ set(SDK_SOURCES
     ${SDK_DIR}/CoreUObject_functions.cpp
     ${SDK_DIR}/Engine_functions.cpp
     ${SDK_DIR}/GameplayAbilities_functions.cpp
+    ${SDK_DIR}/Subnautica2_functions.cpp
     ${SDK_DIR}/UWEAbilitySystem_functions.cpp
+    ${SDK_DIR}/UWEInventory_functions.cpp
 )
 
 # Source files
@@ -39,7 +41,9 @@ target_sources(${PROJECT_NAME} PRIVATE
     src/features/oxygen.cpp
     src/features/battery.cpp
     src/features/esp.cpp
+    src/features/items.cpp
     src/features/speed.cpp
+    src/features/vehicle_spawner.cpp
     src/features/noclip.cpp
     src/ui/menu.cpp
     src/ui/renderer.cpp

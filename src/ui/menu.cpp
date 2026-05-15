@@ -7,9 +7,12 @@
 #include "../features/speed.h"
 #include "../features/noclip.h"
 #include "../features/esp.h"
+#include "../features/items.h"
+#include "../features/vehicle_spawner.h"
 #include <imgui.h>
 #include <algorithm>
 #include <cctype>
+#include <cstdio>
 #include <string>
 
 namespace UI::Menu {
@@ -58,6 +61,10 @@ namespace UI::Menu {
 
             // Tools Tab
             if (ImGui::BeginTabItem("Tools")) {
+                static char itemName[128] = "";
+                static int itemQuantity = 1;
+                static char vehicleQuery[128] = "Tadpole";
+
                 if (ImGui::Checkbox("Infinite Battery", &Features::InfiniteBattery)) {
                     if (Features::InfiniteBattery) {
                         Features::Battery::Enable();
@@ -66,8 +73,33 @@ namespace UI::Menu {
                     }
                 }
 
-                // Add more tool cheats here
-                ImGui::Text("More tool cheats coming soon...");
+                ImGui::Separator();
+                ImGui::Text("Item Giver");
+                ImGui::InputTextWithHint("##item-name", "e.g. Titanium", itemName, IM_ARRAYSIZE(itemName));
+                ImGui::InputInt("Item Quantity", &itemQuantity);
+                if (itemQuantity < 1) {
+                    itemQuantity = 1;
+                }
+
+                if (ImGui::Button("Give Item")) {
+                    Features::Items::GiveItem(itemName, itemQuantity);
+                }
+
+                ImGui::TextWrapped("%s", Features::Items::GetLastStatus().c_str());
+
+                ImGui::Separator();
+                ImGui::Text("Vehicle Spawner");
+                ImGui::InputTextWithHint("##vehicle-query", "e.g. Tadpole or Tadpole 1", vehicleQuery, IM_ARRAYSIZE(vehicleQuery));
+
+                if (ImGui::Button("Tadpole Preset")) {
+                    std::snprintf(vehicleQuery, IM_ARRAYSIZE(vehicleQuery), "%s", "Tadpole 1");
+                }
+                ImGui::SameLine();
+                if (ImGui::Button("Spawn Vehicle")) {
+                    Features::VehicleSpawner::SpawnVehicle(vehicleQuery);
+                }
+
+                ImGui::TextWrapped("%s", Features::VehicleSpawner::GetLastStatus().c_str());
 
                 ImGui::EndTabItem();
             }
