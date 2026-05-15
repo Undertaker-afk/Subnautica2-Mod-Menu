@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\src\core\sdk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\src\core\hooks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\src\core\config.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\src\features\godmode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\src\features\oxygen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\src\features\battery.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\src\features\esp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\src\features\speed.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\src\features\noclip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\src\ui\menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\src\ui\renderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\src\utils\helpers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\vendor\imgui\imgui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\vendor\imgui\imgui_demo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\vendor\imgui\imgui_draw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\vendor\imgui\imgui_tables.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\vendor\imgui\imgui_widgets.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\vendor\imgui\backends\imgui_impl_win32.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\vendor\imgui\backends\imgui_impl_dx11.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{79E013B8-2545-3797-A5EC-50EFA408E45F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

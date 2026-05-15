@@ -1,0 +1,17 @@
+{
+  "credit": {
+    "dumper_link": "https://github.com/Encryqed/Dumper-7",
+    "dumper_used": "Dumper-7"
+  },
+  "data": [
+    ["Dumper", 7],
+    ["OFFSET_GOBJECTS", 215045376],
+    ["OFFSET_APPENDSTRING", 21471328],
+    ["OFFSET_GNAMES", 214110976],
+    ["OFFSET_GWORLD", 211655200],
+    ["OFFSET_PROCESSEVENT", 23829536],
+    ["INDEX_PROCESSEVENT", 76]
+  ],
+  "updated_at": "1778850291465",
+  "version": 10202
+}

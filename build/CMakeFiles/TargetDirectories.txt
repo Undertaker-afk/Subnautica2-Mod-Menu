@@ -1,0 +1,3 @@
+C:/Users/floga/Desktop/coding/cheats/Subnautica2 Mod Menu/build/CMakeFiles/Subnautica2ModMenu.dir
+C:/Users/floga/Desktop/coding/cheats/Subnautica2 Mod Menu/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/floga/Desktop/coding/cheats/Subnautica2 Mod Menu/build/CMakeFiles/ZERO_CHECK.dir

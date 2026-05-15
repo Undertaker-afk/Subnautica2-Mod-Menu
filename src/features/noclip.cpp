@@ -1,0 +1,65 @@
+#include "noclip.h"
+#include "../core/sdk.h"
+#include "../../../5.6.1-113109+++Project+SN2-Release-Hotfix-Live-Subnautica2/CppSDK/SDK.hpp"
+
+namespace Features::NoClip {
+    static bool bOriginalCollisionEnabled = true;
+
+    void Enable() {
+        auto* player = SDK::GetLocalPlayer();
+        if (!player) return;
+
+        // Store original collision state
+        auto* mesh = player->GetMesh();
+        if (mesh) {
+            bOriginalCollisionEnabled = mesh->IsCollisionEnabled();
+            mesh->SetCollisionEnabled(SDK::ECollisionEnabled::NoCollision);
+        }
+
+        // Disable gravity
+        auto* movement = player->GetCharacterMovement();
+        if (movement) {
+            movement->GravityScale = 0.0f;
+        }
+    }
+
+    void Disable() {
+        auto* player = SDK::GetLocalPlayer();
+        if (!player) return;
+
+        // Restore collision
+        auto* mesh = player->GetMesh();
+        if (mesh) {
+            mesh->SetCollisionEnabled(bOriginalCollisionEnabled ? 
+                SDK::ECollisionEnabled::QueryAndPhysics : 
+                SDK::ECollisionEnabled::NoCollision);
+        }
+
+        // Restore gravity
+        auto* movement = player->GetCharacterMovement();
+        if (movement) {
+            movement->GravityScale = 1.0f;
+        }
+    }
+
+    void Update() {
+        if (!Features::bNoClip) {
+            Disable();
+            return;
+        }
+
+        auto* player = SDK::GetLocalPlayer();
+        if (!player) return;
+
+        // Keep collision disabled and gravity off
+        auto* mesh = player->GetMesh();
+        if (mesh) {
+            mesh->SetCollisionEnabled(SDK::ECollisionEnabled::NoCollision);
+        }
+
+        auto* movement = player->GetCharacterMovement();
+        if (movement) {
+            movement->GravityScale = 0.0f;
+        }
+    }
+}
