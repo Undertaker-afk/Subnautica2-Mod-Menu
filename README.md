@@ -45,7 +45,7 @@ cmake .. -G "Visual Studio 17 2022" -A x64
 
 3. **Build**:
 ```powershell
-cmake --build . --config Release
+cmake --build build --config Release --target Subnautica2ModMenu 2>&1 | Select-String -Pattern 'error','fatal'
 ```
 
 The DLL will be output to `build/bin/Release/Subnautica2ModMenu.dll`.
