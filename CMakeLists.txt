@@ -23,7 +23,7 @@ set(IMGUI_SOURCES
 # Source files
 target_sources(${PROJECT_NAME} PRIVATE
     src/main.cpp
-    src/core/sdk.cpp
+    src/core/sdk2.cpp
     src/core/hooks.cpp
     src/core/config.cpp
     src/features/godmode.cpp

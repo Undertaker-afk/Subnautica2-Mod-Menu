@@ -1,0 +1,10 @@
+^C:\USERS\FLOGA\DESKTOP\CODING\CHEATS\SUBNAUTICA2 MOD MENU\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/floga/Desktop/coding/cheats/Subnautica2 Mod Menu" "-BC:/Users/floga/Desktop/coding/cheats/Subnautica2 Mod Menu/build" --check-stamp-file "C:/Users/floga/Desktop/coding/cheats/Subnautica2 Mod Menu/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
