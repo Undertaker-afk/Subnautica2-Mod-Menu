@@ -36,7 +36,7 @@ namespace SDK {
         return nullptr;
     }
 
-    SDK::ABP_SN2PlayerController* GetPlayerController() {
+    SDK::ABP_SN2PlayerController_C* GetPlayerController() {
         auto* world = SDK::UWorld::GetWorld();
         if (!world) return nullptr;
 
@@ -49,8 +49,8 @@ namespace SDK {
             auto* playerController = localPlayer->PlayerController;
             if (!playerController) continue;
 
-            if (playerController->IsA(SDK::ABP_SN2PlayerController::StaticClass())) {
-                return static_cast<SDK::ABP_SN2PlayerController*>(playerController);
+            if (playerController->IsA(SDK::ABP_SN2PlayerController_C::StaticClass())) {
+                return static_cast<SDK::ABP_SN2PlayerController_C*>(playerController);
             }
         }
 

@@ -74,7 +74,7 @@ namespace UI::Renderer {
         if (!g_initialized) return;
         
         ImDrawList* draw_list = ImGui::GetForegroundDrawList();
-        draw_list->AddRect(ImVec2(x, y), ImVec2(x + w, y + h), color, 0.0f, ImDrawFlags_None, thickness);
+        draw_list->AddRect(ImVec2(x, y), ImVec2(x + w, y + h), color, 0.0f, ImDrawCornerFlags_All, thickness);
     }
 
     void DrawLine(float x1, float y1, float x2, float y2, ImColor color, float thickness) {

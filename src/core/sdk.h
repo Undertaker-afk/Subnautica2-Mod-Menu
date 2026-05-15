@@ -10,7 +10,7 @@ namespace SDK {
     
     // Get game objects
     class ASN2PlayerCharacter* GetLocalPlayer();
-    class ABP_SN2PlayerController* GetPlayerController();
+    class ABP_SN2PlayerController_C* GetPlayerController();
 }
 
 // Feature toggles
