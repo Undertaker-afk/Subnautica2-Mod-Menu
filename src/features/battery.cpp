@@ -3,13 +3,33 @@
 #include "../../../5.6.1-113109+++Project+SN2-Release-Hotfix-Live-Subnautica2/CppSDK/SDK.hpp"
 
 namespace Features::Battery {
+    namespace {
+        constexpr float kEnergyEpsilon = 0.01f;
+
+        void RefillEnergy(SDK::ASN2PlayerCharacter* player) {
+            if (!player || !player->MechanicalSetComponent) {
+                return;
+            }
+
+            auto* mechanical = player->MechanicalSetComponent;
+            const float maxEnergy = mechanical->GetMaxEnergy();
+            if (maxEnergy <= 0.0f) {
+                return;
+            }
+
+            if ((maxEnergy - mechanical->GetEnergy()) <= kEnergyEpsilon) {
+                return;
+            }
+
+            mechanical->SetEnergy(maxEnergy);
+        }
+    }
+
     void Enable() {
         auto* player = SDK::GetLocalPlayer();
         if (!player || !player->MechanicalSetComponent) return;
 
-        // Set energy to max
-        float maxEnergy = player->MechanicalSetComponent->GetMaxEnergy();
-        player->MechanicalSetComponent->SetEnergy(maxEnergy);
+        RefillEnergy(player);
     }
 
     void Disable() {
@@ -25,8 +45,6 @@ namespace Features::Battery {
         auto* player = SDK::GetLocalPlayer();
         if (!player || !player->MechanicalSetComponent) return;
 
-        // Keep energy at max
-        float maxEnergy = player->MechanicalSetComponent->GetMaxEnergy();
-        player->MechanicalSetComponent->SetEnergy(maxEnergy);
+        RefillEnergy(player);
     }
 }

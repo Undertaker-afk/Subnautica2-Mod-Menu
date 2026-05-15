@@ -25,6 +25,7 @@ set(SDK_SOURCES
     ${SDK_DIR}/Basic.cpp
     ${SDK_DIR}/CoreUObject_functions.cpp
     ${SDK_DIR}/Engine_functions.cpp
+    ${SDK_DIR}/GameplayAbilities_functions.cpp
     ${SDK_DIR}/UWEAbilitySystem_functions.cpp
 )
 

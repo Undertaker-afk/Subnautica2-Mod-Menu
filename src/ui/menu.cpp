@@ -26,15 +26,23 @@ namespace UI::Menu {
                     Features::GodMode::Enable();
                 }
 
-                ImGui::Checkbox("Infinite Oxygen", &Features::InfiniteOxygen);
-                if (Features::InfiniteOxygen) {
-                    Features::Oxygen::Enable();
+                if (ImGui::Checkbox("Infinite Oxygen", &Features::InfiniteOxygen)) {
+                    if (Features::InfiniteOxygen) {
+                        Features::Oxygen::Enable();
+                    } else {
+                        Features::Oxygen::Disable();
+                    }
                 }
 
-                ImGui::Checkbox("Speed Hack", &Features::SpeedHack);
+                if (ImGui::Checkbox("Speed Hack", &Features::SpeedHack)) {
+                    if (Features::SpeedHack) {
+                        Features::Speed::Enable();
+                    } else {
+                        Features::Speed::Disable();
+                    }
+                }
                 if (Features::SpeedHack) {
                     ImGui::SliderFloat("Speed Multiplier", &Features::SpeedMultiplier, 1.0f, 10.0f, "%.1f");
-                    Features::Speed::Enable();
                 }
 
                 ImGui::Checkbox("No Clip", &Features::bNoClip);
@@ -47,9 +55,12 @@ namespace UI::Menu {
 
             // Tools Tab
             if (ImGui::BeginTabItem("Tools")) {
-                ImGui::Checkbox("Infinite Battery", &Features::InfiniteBattery);
-                if (Features::InfiniteBattery) {
-                    Features::Battery::Enable();
+                if (ImGui::Checkbox("Infinite Battery", &Features::InfiniteBattery)) {
+                    if (Features::InfiniteBattery) {
+                        Features::Battery::Enable();
+                    } else {
+                        Features::Battery::Disable();
+                    }
                 }
 
                 // Add more tool cheats here

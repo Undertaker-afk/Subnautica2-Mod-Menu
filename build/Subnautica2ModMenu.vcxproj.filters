@@ -70,6 +70,9 @@
     <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\5.6.1-113109+++Project+SN2-Release-Hotfix-Live-Subnautica2\CppSDK\SDK\Engine_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\5.6.1-113109+++Project+SN2-Release-Hotfix-Live-Subnautica2\CppSDK\SDK\GameplayAbilities_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\floga\Desktop\coding\cheats\Subnautica2 Mod Menu\5.6.1-113109+++Project+SN2-Release-Hotfix-Live-Subnautica2\CppSDK\SDK\UWEAbilitySystem_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
