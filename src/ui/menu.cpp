@@ -8,6 +8,9 @@
 #include "../features/noclip.h"
 #include "../features/esp.h"
 #include <imgui.h>
+#include <algorithm>
+#include <cctype>
+#include <string>
 
 namespace UI::Menu {
     void Render() {
@@ -71,10 +74,58 @@ namespace UI::Menu {
 
             // ESP Tab
             if (ImGui::BeginTabItem("ESP")) {
-                ImGui::Checkbox("Material ESP", &Features::MaterialESP);
+                ImGui::Checkbox("Resource ESP", &Features::MaterialESP);
                 ImGui::Checkbox("Player ESP", &Features::PlayerESP);
                 ImGui::Checkbox("Creature ESP", &Features::CreatureESP);
                 ImGui::Checkbox("Item ESP", &Features::ItemESP);
+
+                if (Features::MaterialESP) {
+                    static char resourceSearch[128] = "";
+                    Features::ESP::RefreshResourceFilters();
+
+                    ImGui::Separator();
+                    ImGui::Text("Discovered Classes");
+                    ImGui::InputTextWithHint("##resource-search", "Search dumped classes...", resourceSearch, IM_ARRAYSIZE(resourceSearch));
+
+                    if (ImGui::Button("Select All")) {
+                        Features::ESP::SetAllResourceFilters(true);
+                    }
+                    ImGui::SameLine();
+                    if (ImGui::Button("Clear")) {
+                        Features::ESP::SetAllResourceFilters(false);
+                    }
+
+                    std::string searchText = resourceSearch;
+                    std::transform(searchText.begin(), searchText.end(), searchText.begin(), [](unsigned char c) {
+                        return static_cast<char>(std::tolower(c));
+                    });
+
+                    ImGui::BeginChild("resource-filter-list", ImVec2(0.0f, 220.0f), true);
+
+                    const auto& resourceFilters = Features::ESP::GetResourceFilters();
+                    for (std::size_t i = 0; i < resourceFilters.size(); ++i) {
+                        const auto& entry = resourceFilters[i];
+                        std::string lowerLabel = entry.label;
+                        std::transform(lowerLabel.begin(), lowerLabel.end(), lowerLabel.begin(), [](unsigned char c) {
+                            return static_cast<char>(std::tolower(c));
+                        });
+
+                        if (!searchText.empty() && lowerLabel.find(searchText) == std::string::npos) {
+                            continue;
+                        }
+
+                        bool selected = entry.selected;
+                        if (ImGui::Checkbox(entry.label.c_str(), &selected)) {
+                            Features::ESP::SetResourceFilterSelected(i, selected);
+                        }
+                    }
+
+                    ImGui::EndChild();
+
+                    if (!Features::ESP::HasAnySelectedResourceFilter()) {
+                        ImGui::TextColored(ImVec4(1.0f, 0.8f, 0.3f, 1.0f), "Select dumped classes to draw them in ESP.");
+                    }
+                }
 
                 ImGui::EndTabItem();
             }
