@@ -19,20 +19,7 @@ namespace Features::ESP {
     };
 
     static std::string FStringToUtf8(const SDK::FString& value) {
-        const auto* wide = value.c_str();
-        if (!wide) {
-            return {};
-        }
-
-        int size = WideCharToMultiByte(CP_UTF8, 0, wide, -1, nullptr, 0, nullptr, nullptr);
-        if (size <= 0) {
-            return {};
-        }
-
-        std::string utf8;
-        utf8.resize(static_cast<size_t>(size) - 1);
-        WideCharToMultiByte(CP_UTF8, 0, wide, -1, utf8.data(), size, nullptr, nullptr);
-        return utf8;
+        return value.ToString();
     }
 
     static std::vector<ESPObject> objects;
@@ -66,9 +53,9 @@ namespace Features::ESP {
             obj.name.clear();
 
             // Get class name
-            auto* cls = actor->GetClass();
+            auto* cls = actor->Class;
             if (cls) {
-                auto className = FStringToUtf8(cls->GetName());
+                auto className = cls->GetName();
                 obj.name = className;
 
                 std::string lowerName = className;

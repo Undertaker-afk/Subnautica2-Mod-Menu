@@ -15,7 +15,7 @@ namespace Hooks {
     static ID3D11RenderTargetView* g_mainRenderTargetView = nullptr;
     static IDXGISwapChain* g_pSwapChain = nullptr;
     
-    void (*D3D11::PresentCallback)(IDXGISwapChain*, UINT, UINT) = nullptr;
+    D3D11::PresentCallbackType D3D11::PresentCallback = nullptr;
 
     // Hooked Present function
     HRESULT __stdcall hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT Flags) {

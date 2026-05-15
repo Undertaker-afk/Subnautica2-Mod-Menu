@@ -2,11 +2,7 @@
 
 #include <Windows.h>
 #include <d3d11.h>
-
-// Forward declare ImGui
-struct ImDrawData;
-struct ImVec4;
-struct ImColor;
+#include <imgui.h>
 
 namespace UI {
     namespace Renderer {

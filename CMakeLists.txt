@@ -20,6 +20,14 @@ set(IMGUI_SOURCES
     ${IMGUI_DIR}/backends/imgui_impl_dx11.cpp
 )
 
+set(SDK_DIR "${CMAKE_CURRENT_SOURCE_DIR}/5.6.1-113109+++Project+SN2-Release-Hotfix-Live-Subnautica2/CppSDK/SDK")
+set(SDK_SOURCES
+    ${SDK_DIR}/Basic.cpp
+    ${SDK_DIR}/CoreUObject_functions.cpp
+    ${SDK_DIR}/Engine_functions.cpp
+    ${SDK_DIR}/UWEAbilitySystem_functions.cpp
+)
+
 # Source files
 target_sources(${PROJECT_NAME} PRIVATE
     src/main.cpp
@@ -36,6 +44,7 @@ target_sources(${PROJECT_NAME} PRIVATE
     src/ui/renderer.cpp
     src/utils/helpers.cpp
     ${IMGUI_SOURCES}
+    ${SDK_SOURCES}
 )
 
 # Include directories

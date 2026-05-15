@@ -6,10 +6,6 @@ namespace Features::Oxygen {
     void Enable() {
         auto* player = SDK::GetLocalPlayer();
         if (!player || !player->SurvivalSetComponent) return;
-
-        // Set oxygen to max
-        float maxOxygen = player->SurvivalSetComponent->GetMaxOxygen();
-        player->SurvivalSetComponent->SetOxygen(maxOxygen);
     }
 
     void Disable() {
@@ -24,9 +20,5 @@ namespace Features::Oxygen {
 
         auto* player = SDK::GetLocalPlayer();
         if (!player || !player->SurvivalSetComponent) return;
-
-        // Keep oxygen at max
-        float maxOxygen = player->SurvivalSetComponent->GetMaxOxygen();
-        player->SurvivalSetComponent->SetOxygen(maxOxygen);
     }
 }

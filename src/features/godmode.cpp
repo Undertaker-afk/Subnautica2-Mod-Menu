@@ -12,15 +12,15 @@ namespace Features::GodMode {
         // Store original max health
         originalMaxHealth = player->HealthSetComponent->GetMaxHealth();
 
-        // Set health to max and prevent damage
-        player->HealthSetComponent->SetCurrentHealth(originalMaxHealth);
+        // Refill health using the current SDK setter.
+        player->HealthSetComponent->SetHealth(originalMaxHealth);
     }
 
     void Disable() {
         // Restore original health state
         auto* player = SDK::GetLocalPlayer();
         if (player && player->HealthSetComponent) {
-            player->HealthSetComponent->SetCurrentHealth(originalMaxHealth);
+            player->HealthSetComponent->SetHealth(originalMaxHealth);
         }
     }
 
@@ -35,6 +35,6 @@ namespace Features::GodMode {
 
         // Keep health at max
         float maxHealth = player->HealthSetComponent->GetMaxHealth();
-        player->HealthSetComponent->SetCurrentHealth(maxHealth);
+        player->HealthSetComponent->SetHealth(maxHealth);
     }
 }

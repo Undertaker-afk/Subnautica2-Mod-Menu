@@ -12,8 +12,8 @@ namespace Features::NoClip {
         // Store original collision state
         auto* mesh = player->Mesh;
         if (mesh) {
-            bOriginalCollisionEnabled = mesh->IsCollisionEnabled();
-            mesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+            bOriginalCollisionEnabled = mesh->K2_IsCollisionEnabled();
+            mesh->SetCollisionEnabled(SDK::ECollisionEnabled::NoCollision);
         }
 
         // Disable gravity
@@ -31,8 +31,8 @@ namespace Features::NoClip {
         auto* mesh = player->Mesh;
         if (mesh) {
             mesh->SetCollisionEnabled(bOriginalCollisionEnabled ? 
-                ECollisionEnabled::QueryAndPhysics : 
-                ECollisionEnabled::NoCollision);
+                SDK::ECollisionEnabled::QueryAndPhysics : 
+                SDK::ECollisionEnabled::NoCollision);
         }
 
         // Restore gravity
@@ -54,7 +54,7 @@ namespace Features::NoClip {
         // Keep collision disabled and gravity off
         auto* mesh = player->Mesh;
         if (mesh) {
-            mesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+            mesh->SetCollisionEnabled(SDK::ECollisionEnabled::NoCollision);
         }
 
         auto* movement = player->CharacterMovement;
