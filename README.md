@@ -63,7 +63,7 @@ Subnautica2 Mod Menu/
 ├── src/
 │   ├── main.cpp              # DLL entry point
 │   ├── core/
-│   │   ├── sdk.cpp/h         # SDK interface
+│   │   ├── sdk2.cpp/h         # SDK interface
 │   │   ├── hooks.cpp/h       # D3D11 hooks
 │   │   └── config.cpp/h      # Config management
 │   ├── features/
